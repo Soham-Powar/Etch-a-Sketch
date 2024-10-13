@@ -1,24 +1,36 @@
 const container = document.querySelector('.container');
 const noOfSq = document.querySelector('.noOfSq');
-let n = 16;
+let squareNo = 16;
 
 //create nxn grid
-for(let j = 0; j < n; j++) {
-	const line = document.createElement('div');
-	line.setAttribute("class", 'line');
-	for(let i = 0; i < n; i++) {
-		let div = document.createElement('div');
-		div.setAttribute("class", 'block')
-		line.appendChild(div);
-		div.addEventListener("mouseenter", () => {
-			div.style.backgroundColor = 'aquamarine';
-		})
+createGrid(squareNo);
+function createGrid(squareNo) {
+	for(let j = 0; j < squareNo; j++) {
+		const line = document.createElement('div');
+		line.setAttribute("class", 'line');
+		for(let i = 0; i < squareNo; i++) {
+			let div = document.createElement('div');
+			div.setAttribute("class", 'block')
+			line.appendChild(div);
+			div.addEventListener("mouseenter", () => {
+				div.style.backgroundColor = 'aquamarine';
+			})
+		}
+		container.appendChild(line);
 	}
-	container.appendChild(line);
+}
+
+//clear previous grid
+function clearPrevGrid() {
+	container.innerHTML = '';
 }
 
 //popup how many squares on button click
 noOfSq.addEventListener('click', () => {
-	let squareNo = prompt("Enter number of squares per side");
-
+	squareNo = prompt("Enter number of squares per side(max=100)");
+	clearPrevGrid();
+	if(squareNo === null) {
+		squareNo = 16;
+	}
+	createGrid(squareNo);
 })
