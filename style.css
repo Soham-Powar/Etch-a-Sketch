@@ -3,3 +3,19 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+.container {
+	background-color: pink;
+	display: flex;
+	flex-wrap: wrap;
+	width: 640px;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.block {
+	height: 40px;
+	width: 40px;
+	border: 1px solid black;
+	/* margin: 5px; */
+}
