@@ -1,6 +1,6 @@
 # Etch-a-Sketch
 
-This is a solution to the [Etch-a-Sketch Project](https://www.theodinproject.com/lessons/node-path-foundations-etch-a-sketch-project) from The Odin Project's Foundations curriculum.
+This is a solution to the [Etch-a-Sketch Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch) from The Odin Project's Foundations curriculum.
 
 ## Project Overview
 This project simulates an Etch-a-Sketch drawing pad, allowing users to "draw" on a grid with customizable features:
